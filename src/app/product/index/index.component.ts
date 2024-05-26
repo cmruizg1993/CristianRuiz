@@ -12,6 +12,8 @@ import { ModalSettings } from '../../classes/modal-settings';
   styleUrl: './index.component.css'
 })
 export class IndexComponent {
+  error = false;
+  errorName = '';
   products: Product[];
   filteredProducts: Product[];
   headers: IHeader[];
@@ -23,25 +25,27 @@ export class IndexComponent {
   ){
     this.products = [];
     this.filteredProducts = [];
-    this.headers = [ 
-      { key: 'id', label: 'Id', hidden: true }, 
-      { key: 'logo', label: 'Logo', isImage: true }, 
-      { key: 'name', label: 'Nombre del prducto' }, 
-      { key: 'description', label: 'Descripcion', info: 'Representa a descripción del producto financiero' }, 
-      { key: 'date_release', label: 'Fecha de liberación', info: 'Representa la fecha de liberación del producto financiero' }, 
+    this.headers = [
+      { key: 'id', label: 'Id', hidden: true },
+      { key: 'logo', label: 'Logo', isImage: true },
+      { key: 'name', label: 'Nombre del prducto' },
+      { key: 'description', label: 'Descripcion', info: 'Representa a descripción del producto financiero' },
+      { key: 'date_release', label: 'Fecha de liberación', info: 'Representa la fecha de liberación del producto financiero' },
       { key: 'date_revision', label: 'Fecha de reestructuración',  info: 'Representa la fecha de revisión del producto financiero' } ];
-    this.context = {        
+    this.context = {
       items: [
         {
           label: 'Editar',
-          action: (data: any)=>{ 
+          action: (data: any)=>{
             //console.log('Editar', data);
             this.router.navigateByUrl('/edit', { state: data });
           }
         },
         {
           label: 'Eliminar',
-          action: (data: any)=>{ 
+          action: (data: any)=>{
+            //this.modalSettings = new ModalSettings();
+            this.error = false;
             this.modalSettings.cancelButton = true;
             this.modalSettings.confirmButton = true;
             this.modalSettings.content = `Esta seguro que desea eliminar el producto "${data.name}"`;
@@ -55,29 +59,40 @@ export class IndexComponent {
           }
         }
       ]
-    } 
+    }
     this.modalSettings = new ModalSettings();
-    
+
   }
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.productService.getProducts()
       .then((result: Product[]) => {
-        this.products = result;   
-        this.filteredProducts = this.products.slice();     
+        this.products = result;
+        this.filteredProducts = this.products.slice();
       })
       .catch( err => {
-        //console.log(err);
+        console.log(err);
+        this.error = true;
+        this.errorName = err.name
+        //this.modalSettings = new ModalSettings();
+        this.modalSettings.confirmButtonLabel = 'Aceptar';
+        this.modalSettings.cancelButton = false;
+        this.modalSettings.confirmButton = true;
+        this.modalSettings.content = `No se pudo obtener los datos del servidor, por favor inténtalo más tarde.`;
+        this.modalSettings.confirmAction = () => {
+          this.modalSettings.close();
+        }
+        this.modalSettings.open();
       })
   }
   onFilterUpdate(event: string){
     //console.log('Filter updated: ', event);
-    this.filteredProducts = this.products.filter( p => 
-      p.id.toUpperCase().indexOf(event.toUpperCase()) >= 0|| 
+    this.filteredProducts = this.products.filter( p =>
+      p.id.toUpperCase().indexOf(event.toUpperCase()) >= 0||
       p.name.toUpperCase().indexOf(event.toUpperCase()) >= 0 ||
       p.description.toUpperCase().indexOf(event.toUpperCase()) >= 0||
-       p.date_release.toUpperCase().indexOf(event.toUpperCase()) >= 0 || 
+       p.date_release.toUpperCase().indexOf(event.toUpperCase()) >= 0 ||
        p.date_revision.toUpperCase().indexOf(event.toUpperCase()) >= 0
       );
     //console.log(this.filteredProducts)

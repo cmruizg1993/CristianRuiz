@@ -13,8 +13,9 @@
         <div class="d-flex justify-content-center mb-2">
             <img [src]="error ? 'assets/img/sad.svg':'assets/img/happy.svg'" width="50px">
         </div>
-        <p class="text-primary fw-800">
+        <p class="text-primary fw-800 mb-2">
             {{modalSettings.content}}
         </p>
+        <small *ngIf="error">Error: {{errorName}}</small>
     </div>
 </app-modal>

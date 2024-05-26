@@ -13,6 +13,7 @@ import { ModalSettings } from '../../classes/modal-settings';
   styleUrl: './edit.component.css'
 })
 export class EditComponent {
+  errorName = '';
   error = false;
   fields: IFormField[];
   buttons: IFormButton[];
@@ -52,7 +53,7 @@ export class EditComponent {
       this.modalSettings.open();
     })
     .catch(err => {
-      //console.log(err)
+      this.errorName = err.name;
       this.error = true;
       this.modalSettings.cancelButton = false;
       this.modalSettings.confirmButton = true;

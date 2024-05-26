@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 })
 export class CreateComponent {
   error = false;
+  errorName = '';
   fields: IFormField[];
   buttons: IFormButton[];
   modalSettings: ModalSettings;
@@ -50,7 +51,7 @@ export class CreateComponent {
       this.modalSettings.open();
     })
     .catch(err => {
-      //console.log(err)
+      this.errorName = err.name;
       this.error = true;
       this.modalSettings.cancelButton = false;
       this.modalSettings.confirmButton = true;
