@@ -35,7 +35,7 @@ export class IndexComponent {
         {
           label: 'Editar',
           action: (data: any)=>{ 
-            console.log('Editar', data);
+            //console.log('Editar', data);
             this.router.navigateByUrl('/edit', { state: data });
           }
         },
@@ -68,11 +68,11 @@ export class IndexComponent {
         this.filteredProducts = this.products.slice();     
       })
       .catch( err => {
-        console.log(err);
+        //console.log(err);
       })
   }
   onFilterUpdate(event: string){
-    console.log('Filter updated: ', event);
+    //console.log('Filter updated: ', event);
     this.filteredProducts = this.products.filter( p => 
       p.id.toUpperCase().indexOf(event.toUpperCase()) >= 0|| 
       p.name.toUpperCase().indexOf(event.toUpperCase()) >= 0 ||
@@ -80,7 +80,7 @@ export class IndexComponent {
        p.date_release.toUpperCase().indexOf(event.toUpperCase()) >= 0 || 
        p.date_revision.toUpperCase().indexOf(event.toUpperCase()) >= 0
       );
-    console.log(this.filteredProducts)
+    //console.log(this.filteredProducts)
   }
   agregarProducto(){
     this.router.navigate(['/create']);

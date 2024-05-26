@@ -21,7 +21,7 @@ export class LoadingInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const showLoader = request.headers.has('X-Loader') ? request.headers.get('X-Loader') !== 'none': true;
     this.countRequest++;
-    console.log('showLoader', showLoader)
+    //console.log('showLoader', showLoader)
     if(showLoader){      
       this.loaderService.showLoader();
     }

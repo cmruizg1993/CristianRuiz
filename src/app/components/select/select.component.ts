@@ -28,7 +28,7 @@ export class SelectComponent {
   }
   
   emitUpdate(){
-    console.log(this.model)
+    //console.log(this.model)
     this.modelUpdate.emit(this.model);
   }
 }

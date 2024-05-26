@@ -28,7 +28,7 @@ export class PagerComponent {
         page.isActive = i == 0 ;
         return page;
       });
-      console.log(this.pages)
+      //console.log(this.pages)
     }
   }
   updatePage(page: Page){

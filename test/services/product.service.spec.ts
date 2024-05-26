@@ -44,7 +44,7 @@ describe('TestService', () => {
     
     service.createProduct(product)
     .then( (data: any) =>{
-        console.log(data)
+        //console.log(data)
         expect(true).toBeTruthy();
         done();
     })

@@ -50,7 +50,7 @@ export class CreateComponent {
       this.modalSettings.open();
     })
     .catch(err => {
-      console.log(err)
+      //console.log(err)
       this.error = true;
       this.modalSettings.cancelButton = false;
       this.modalSettings.confirmButton = true;

@@ -44,7 +44,7 @@ export class FormComponent {
   evaluateControl(field: any){
     const controlName = field.name;
     const control = this.form.get(controlName)
-    //console.log(control, controlName)
+    ////console.log(control, controlName)
     let status : any = false;
     if(control){
       status =
@@ -56,7 +56,7 @@ export class FormComponent {
       }
     }
       
-    //console.log(controlName, status, control?.errors)
+    ////console.log(controlName, status, control?.errors)
     return status;
   }
 

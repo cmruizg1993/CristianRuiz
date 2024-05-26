@@ -60,7 +60,7 @@ export class ContextMenuComponent {
       .pipe(
         filter(event => {
           const clickTarget = event.target as HTMLElement;
-          //console.log(clickTarget, this.overlayRef)
+          ////console.log(clickTarget, this.overlayRef)
           //return !!this.overlayRef && !this.overlayRef.overlayElement.contains(clickTarget);
           return clickTarget != target
         })/*,

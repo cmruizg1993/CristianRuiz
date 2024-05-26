@@ -24,7 +24,7 @@ export class InputComponent {
     return this.privateModel;
   }
   onModelChange(){
-    console.log(this.model);
+    //console.log(this.model);
     this.modelUpdate.emit(this.model);
   }
 }
