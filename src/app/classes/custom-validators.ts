@@ -12,10 +12,9 @@ export  class CustomValidators {
     }
     static productValidateDateFormat(): ValidatorFn{
         return (control: AbstractControl): ValidationErrors | null => {
-            
-            const result = true;
             const regex = /[0-9]{4,4}-[0-9]{2,2}-[0-9]{2,2}/;
             const date = new Date(control.value);
+            //console.log(regex)
             return !regex.test(control.value) || isNaN(date.getDate()) ? { invalidDateFormat: { value: control.value } } : null;
         };
     }
@@ -23,6 +22,7 @@ export  class CustomValidators {
         return (control: AbstractControl): ValidationErrors | null => {
             const date = new Date(control.value);
             const currentDate = new Date();
+            console.log(date < currentDate)
             return date < currentDate ? { invalidDateValue: { value: control.value } } : null;
         };
     }

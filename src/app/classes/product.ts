@@ -12,7 +12,7 @@ export class Product implements IProduct{
     logo: string;
     date_release: string;
     date_revision: string;
-    
+
     constructor(
         id = '',
         name = '',
@@ -20,7 +20,7 @@ export class Product implements IProduct{
         logo: '',
         date_release: '',
         date_revision: ''
-    ) { 
+    ) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -62,14 +62,14 @@ export class Product implements IProduct{
               required: true,
               pattern: '^20[0-9]{2,2}-[01]{1,1}[0-9]{1,1}-[0123]{1,1}[0-9]{1,1}$',
               female: true,
-              validators: [CustomValidators.productValidateDateFormat, CustomValidators.productValidateDateValue],
+              validators: [CustomValidators.productValidateDateFormat(), CustomValidators.productValidateDateValue()],
               onValidation: (value: string, form: FormGroup) =>
-                { 
+                {
                   const control = form.get('date_revision');
                   if(control){
                     const releaseDate = value.split('-');
                     control.setValue(`${Number(releaseDate[0])+1}-${releaseDate[1]}-${releaseDate[2]}`);
-                  }            
+                  }
                 }
             },
             {
@@ -118,14 +118,14 @@ export class Product implements IProduct{
               pattern: '^20[0-9]{2,2}-[01]{1,1}[0-9]{1,1}-[0123]{1,1}[0-9]{1,1}$',
               female: true,
               value: product.date_release,
-              validators: [CustomValidators.productValidateDateFormat, CustomValidators.productValidateDateValue],
+              validators: [CustomValidators.productValidateDateFormat(), CustomValidators.productValidateDateValue()],
               onValidation: (value: string, form: FormGroup) =>
-                { 
+                {
                   const control = form.get('date_revision');
                   if(control){
                     const releaseDate = value.split('-');
                     control.setValue(`${Number(releaseDate[0])+1}-${releaseDate[1]}-${releaseDate[2]}`);
-                  }            
+                  }
                 }
             },
             {
