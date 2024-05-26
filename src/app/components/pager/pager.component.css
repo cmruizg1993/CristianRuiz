@@ -1,0 +1,21 @@
+.pages>ul{
+    display: inline;
+}
+.pages>ul>li{
+    display: inline;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.pages>ul>li>span{
+    font-size: 1rem;
+    color: var(--blue-600);
+}
+.pages>ul>li>span:hover{
+    color: var(--blue-700);
+    text-decoration: underline;
+}
+/*
+.pages>ul>li>span.active{
+    font-weight: 800;
+}
+*/

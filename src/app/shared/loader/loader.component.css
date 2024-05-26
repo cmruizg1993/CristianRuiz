@@ -1,0 +1,13 @@
+.loader-container{
+    display: flex;
+    height: 100vh;
+  }
+  .loader {
+    margin: auto;
+    align-self: center;
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+  }
+  

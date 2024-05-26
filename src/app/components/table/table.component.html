@@ -1,0 +1,36 @@
+<div class="container-fluid bg-white table-responsive">
+    <table class="bg-white mt-2">
+        <thead class="" *ngIf="headers.length > 0">
+            <th *ngFor="let h of headers">
+                <div *ngIf="!h.hidden " class="tooltip d-flex">{{h.label}}
+                    <span *ngIf="h.info" class="d-flex" style="align-items: end;">
+                        <img src="assets/img/info.svg" width="14px" style="margin-left: 0.5rem;">                        
+                    </span>
+                    <span *ngIf="h.info" class="tooltiptext">{{h.info}}</span>
+                </div>
+            </th>
+            <th *ngIf="context"></th>
+        </thead>
+        <tbody *ngIf="data.length > 0" class="collection">
+            <tr *ngFor="let item of view; index as i" >
+                <td *ngFor="let h of headers">
+                    <span *ngIf="!h.hidden && !h.isImage">{{getValue(i, h )}}</span>
+                    <img *ngIf="h.isImage" [src]="getValue(i, h)" width="50px" alt="img" style="border-radius: 50%;">
+                </td>
+                <td *ngIf="context">
+                    <button class="btn-icon" (click)="openContextMenu($event, item); $event.preventDefault();">
+                        <img src="assets/img/dots.svg" width="14px">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pager bg-white mt-1">
+        <app-pager [dataLength]="data.length" (pagerUpdate)="pagerUpdate($event)"></app-pager>   
+    </div>
+</div>
+<app-context-menu *ngIf="context" 
+    [contextMenu]="context"
+    [showContextMenu$]="showContextMenu$.asObservable()"
+    >
+</app-context-menu>

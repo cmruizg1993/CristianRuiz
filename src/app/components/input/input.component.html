@@ -1,0 +1,21 @@
+<div class="form-group p-2">
+    <label for=""  class="text-primary fs-2 fw-800">{{label}}</label>
+    
+    <ng-container *ngIf="formControlName; else ngModelTemplate">
+        <input type="text" 
+            [placeholder]="placeholder" 
+            [class]="class" 
+            [disabled]="disabled"
+            [formControlName]="formControlName"
+        >
+    </ng-container>
+    <ng-template #ngModelTemplate>
+        <input type="text" 
+        [placeholder]="placeholder" 
+        [class]="class" 
+        [disabled]="disabled"
+        [(ngModel)]="model"
+        >
+    </ng-template>
+    
+</div>

@@ -1,0 +1,21 @@
+<svg width="470" height="360" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_16">
+   <rect id="svg_11" height="200" width="300" y="130" x="30" stroke="#000" fill="#061239"/>
+   <rect id="svg_12" height="160" width="260" y="150" x="50" stroke="#000" fill="#ffffff"/>
+   <ellipse ry="50" rx="50" id="svg_13" cy="230" cx="180" stroke="#000" fill="#061239"/>
+  </g>
+  <g id="svg_28">
+   <rect id="svg_25" height="200" width="300" y="30" x="140" stroke="#000" fill="#061239"/>
+   <rect id="svg_26" height="160" width="260" y="50" x="160" stroke="#000" fill="#ffffff"/>
+   <ellipse ry="50" rx="50" id="svg_27" cy="130" cx="290" stroke="#000" fill="#061239"/>
+  </g>
+  <rect rx="25" id="svg_29" height="200" width="300" y="30" x="140" stroke="#000" fill="#061239"/>
+  <rect rx="25" id="svg_30" height="160" width="260" y="50" x="160" stroke="#000" fill="#ffffff"/>
+  <rect rx="25" id="svg_17" height="200" width="300" y="130" x="30" stroke="#000" fill="#061239"/>
+  <rect rx="25" id="svg_18" height="160" width="260" y="150" x="50" stroke="#000" fill="#ffffff"/>
+  <ellipse ry="50" rx="50" id="svg_19" cy="230" cx="180" stroke="#000" fill="#061239"/>
+ </g>
+</svg>

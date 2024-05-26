@@ -1,0 +1,23 @@
+<form [formGroup]="form">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let field of fields">
+            <div class="form-group p-2">
+                <label for="" class="text-primary fs-2 fw-800">{{field.label}}</label>
+
+                <input type="text" class="w100" [formControlName]="field.name" [placeholder]="field.placeholder? field.placeholder: ''">
+
+                <div class="text-danger fw-bolder" style="height: 1rem !important;">
+                    <small *ngIf="evaluateControl(field)">
+                        {{getErrorMessage(field)}}
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row p-4 ">
+        <div class="col d-flex justify-content-center" *ngFor="let button of buttons">
+            <app-button [label]="button.label" [primary]="button.primary"
+                [disabled]="button.validForm && !form.valid" (click)="onClick(button)"></app-button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,18 @@
+<div class="container mt-2">
+    <div class="row">
+        <div class="d-flex col">
+            <app-input [placeholder]="'Buscar...'" (modelUpdate)="onFilterUpdate($event)"></app-input>
+        </div>
+        <div class="d-flex col justify-content-end">
+            <app-button label="Agregar" (onClick)="agregarProducto()" [primary]="true"></app-button>
+        </div>   
+    </div>
+    <app-table [data]="filteredProducts" [headers]="headers" [context]="context"></app-table>
+</div>
+<app-modal [modalSettings]="modalSettings" class="w25">
+    <div class="model-content">
+        <p class="text-primary fw-800">
+            {{modalSettings.content}}
+        </p>
+    </div>
+</app-modal>

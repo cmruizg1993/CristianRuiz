@@ -1,1 +1,406 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --strongBlue300: #88b7e3;
+    --strongBlue500: #2f7abf;
+    --strongBlue700: #003f7f;
+    --moderateCyan300: #8eddd8;
+    --moderateCyan500: #54d2b4;
+    --moderateCyan700: #00af89;
+    --grayishRed300: #e1bbb0;
+    --grayishRed500: #c89696;
+    --grayishRed700: #896464;
+    --yellow50: #fffbe5;
+    --yellow100: #fff8cc;
+    --yellow200: #fff199;
+    --yellow300: #ffeb66;
+    --yellow400: #ffe433;
+    --yellow500: #ffdd00;
+    --yellow600: #ffd700;
+    --yellow700: #ffd100;
+    --yellow800: #ffcb00;
+    --yellow900: #ffc500;
+    --blue50: #e7e9ee;
+    --blue100: #cfd4de;
+    --blue200: #9fa8be;
+    --blue300: #6f7d9d;
+    --blue400: #3f517d;
+    --blue500: #0f265c;
+    --blue600: #0c1f50;
+    --blue700: #091944;
+    --blue800: #061239;
+    --blue900: #030c2d;
+    --yellowGold50: #fffcf2;
+    --yellowGold100: #fff3cd;
+    --yellowGold200: #ffe69c;
+    --yellowGold300: #ffda6a;
+    --yellowGold400: #ffcd39;
+    --yellowGold500: #ffc108;
+    --yellowGold600: #ffb705;
+    --yellowGold700: #ffae02;
+    --yellowGold800: #ffa400;
+    --yellowGold900: #ff9b00;
+    --darkCyan50: #f2f9f9;
+    --darkCyan100: #e5f4f3;
+    --darkCyan200: #99d5cf;
+    --darkCyan300: #66c0b8;
+    --darkCyan400: #33aba0;
+    --darkCyan500: #009688;
+    --darkCyan600: #00897b;
+    --darkCyan700: #007d6e;
+    --darkCyan800: #007062;
+    --darkCyan900: #006455;
+    --pureOrange50: #fff4e5;
+    --pureOrange100: #ffeacc;
+    --pureOrange200: #ffd699;
+    --pureOrange300: #ffc166;
+    --pureOrange400: #ffad33;
+    --pureOrange500: #ff9800;
+    --pureOrange600: #ff8c00;
+    --pureOrange700: #ff7f00;
+    --pureOrange800: #ff7300;
+    --pureOrange900: #ff6700;
+    --darkGrayishBlue50: #f9fafc;
+    --darkGrayishBlue100: #f4f6f9;
+    --darkGrayishBlue200: #e9ecf3;
+    --darkGrayishBlue300: #dee3ed;
+    --darkGrayishBlue400: #d3d9e7;
+    --darkGrayishBlue500: #c7cfe1;
+    --darkGrayishBlue600: #bec7db;
+    --darkGrayishBlue700: #b5bfd6;
+    --darkGrayishBlue800: #adb8d1;
+    --darkGrayishBlue900: #a4b0cb;
+    --white: #ffffff;
+    --darkGrey50: #f6f6f6;
+    --darkGrey100: #ececed;
+    --darkGrey200: #dbdbdc;
+    --darkGrey300: #b7b7b9;
+    --darkGrey400: #6E6E73;
+    --darkGrey500: #2C2C30;
+    --black: #070707;
+    --success: #31a451;
+    --success50: #ecf6ee;
+    --success100: #daeedf;
+    --success200: #b4dcbe;
+    --success300: #8bc99d;
+    --success400: #61b679;
+    --success600: #299846;
+    --success700: #218c3b;
+    --success800: #19812f;
+    --success900: #107524;
+    --info: #2f7abf;
+    --info50: #eaf1f8;
+    --info100: #d5e4f2;
+    --info200: #accae5;
+    --info300: #82afd9;
+    --info400: #5995cc;
+    --info600: #276db6;
+    --info700: #1f60ac;
+    --info800: #1854a2;
+    --info900: #104798;
+    --warning: #f76800;
+    --warning50: #fef0e5;
+    --warning100: #fde1cc;
+    --warning200: #fcc399;
+    --warning300: #faa466;
+    --warning400: #f98633;
+    --warning600: #f65b00;
+    --warning700: #f44f00;
+    --warning800: #f34300;
+    --warning900: #f13700;
+    --danger: #d50707;
+    --danger50: #fbe6e6;
+    --danger100: #f7cdcd;
+    --danger200: #ee9c9c;
+    --danger300: #e66a6a;
+    --danger400: #dd3939;
+    --danger600: #ce0505;
+    --danger700: #c70404;
+    --danger800: #c00202;
+    --danger900: #b90101;
+    --error200: #ee9c9c;
+    --error300: #f27e65;
+    --error500: #d50707;
+    --error600: #b70514;
+    --error700: #99031d;
+    /*sizing*/
+    --size-xs: 0.5rem;
+    --size-sm: 1rem;
+    --size-md: 1.5rem;
+    --size-lg: 2rem;
+}
+
+@font-face {
+    font-family: DemoFont;
+    src: url('assets/fonts/font.woff2');
+}
+html, body{
+    background-color: var(--darkGrayishBlue300);
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+*{
+    font-family: DemoFont;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-white{
+    background-color: var(--white);
+}
+.bg-secondary{
+    background-color: var(--darkGrayishBlue200);
+}
+.text-primary{
+    color: var(--blue800);
+}
+.text-danger{
+    color: var(--error500);
+}
+.ng-touched.ng-invalid{
+    border-color: var(--error500) !important;
+}
+
+/* Borders */
+
+.border-radius-1{
+    border-radius: var(--size-sm);
+    border-width: 1px;
+    border-style: solid;
+}
+
+/*  Padding  */
+.p-1{
+    padding: var(--size-xs)
+}
+.p-2{
+    padding: var(--size-sm)
+}
+.p-3{
+    padding: var(--size-md)
+}
+.p-4{
+    padding: var(--size-lg)
+}
+.pb-1{
+    margin-bottom: var(--size-xs)
+}
+.pb-2{
+    margin-bottom: var(--size-sm)
+}
+.pb-3{
+    margin-bottom: var(--size-md)
+}
+.pb-4{
+    margin-bottom: var(--size-lg)
+}
+.pt-1{
+    margin-top: var(--size-xs)
+}
+.pt-2{
+    margin-top: var(--size-sm)
+}
+.pt-3{
+    margin-top: var(--size-md)
+}
+.pt-4{
+    margin-top: var(--size-lg)
+}
+
+/*  Margin  */
+.m-1{
+    margin: var(--size-xs)
+}
+.m-2{
+    margin: var(--size-sm)
+}
+.m-3{
+    margin: var(--size-md)
+}
+.m-4{
+    margin: var(--size-lg)
+}
+.mb-1{
+    margin-bottom: var(--size-xs)
+}
+.mb-2{
+    margin-bottom: var(--size-sm)
+}
+.mb-3{
+    margin-bottom: var(--size-md)
+}
+.mb-4{
+    margin-bottom: var(--size-lg)
+}
+.mt-1{
+    margin-top: var(--size-xs)
+}
+.mt-2{
+    margin-top: var(--size-sm)
+}
+.mt-3{
+    margin-top: var(--size-md)
+}
+.mt-4{
+    margin-top: var(--size-lg)
+}
+
+/*  Container   */
+
+.container-fluid{
+    width: 100% !important;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+/*  Font    */
+.fs-2{
+    font-size: var(--size-sm);
+}
+.fs-4{
+    font-size: var(--size-lg);
+}
+.fw-800{
+    font-weight: 800;
+}
+
+/*  GRID    */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    flex: 1 0 0%;
+}
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.w100{
+    width: 100% !important;
+}
+.w50{
+    width: 50% !important;
+}
+.w25{
+    width: 25% !important;
+}
+/*  display   */
+.d-flex{
+    display: flex !important;
+}
+.d-block{
+    display: block !important;
+}
+.d-none{
+    display: none !important;
+}
+.justify-content-start{
+    justify-content: start;    
+}
+.justify-content-center{
+    justify-content: center;    
+}
+.justify-content-end{
+    justify-content: end;    
+}
+
+/*  INPUTS  */
+input, select{
+    box-sizing: border-box !important;
+    border: 1px solid #DBDBDC !important;
+    border-radius: 4px !important;
+    height: 48px !important;
+    font-family: 'DemoFont' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    color: #2C2C30 !important;
+    padding: 14px 12px !important;
+}
+input:focus, select:focus {
+    outline: 3px #2F7ABF;
+    border-color: #2F7ABF;
+}
+
+/*  CONTEXT MENU    */
+.cdk-overlay-connected-position-bounding-box{
+    position: absolute !important;
+    width: 0px !important;
+}
+/**/
+.hr{
+    display: block;
+    border-bottom: 1px solid var(--blue300) !important ;
+    width: 100%;
+}
+.float-left{
+    float: left !important;
+}
+.float-right{
+    float: right !important;
+}
+
+.btn-icon{
+    border: 0;
+    padding: 0.2rem !important;
+    background-color: inherit;
+}
+.btn-icon:hover{
+    background-color: var(--darkGrayishBlue500);
+    border: 0.1 solid rgba(red, green, blue, 1);
+}
+
+/*  Tooltip     */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 10rem;
+    background-color: var(--blue600);;
+    color: #fff;
+    text-align: center;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    padding: 0.5rem;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1000;
+    left:   50%;
+    top: -1rem;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 var(--yellow900), -20px 0 #0002;background: var(--yellow900) }
+    33% {box-shadow: 20px 0 var(--yellow900), -20px 0 #0002;background: #0002}
+    66% {box-shadow: 20px 0 #0002,-20px 0 var(--yellow900); background: #0002}
+    100%{box-shadow: 20px 0 var(--yellow900),-20px 0 var(--yellow900); background: var(--yellow900) }
+}
+@keyframes l6 {
+  0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
+  33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
+  66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
+  100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+}

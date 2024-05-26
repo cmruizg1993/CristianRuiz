@@ -1,0 +1,23 @@
+<div class="row p-2">
+    <div class="col">
+        <p class="fs-2 fw-800 fs-2 fw-800">Mostrando {{pagerProperties.pageSize}} de {{dataLength}}&emsp; Resultados</p>
+    </div>
+    <div class="col d-flex justify-content-end">
+        <div class="pages">
+            <ul>
+                <li  *ngFor="let page of pages" (click)="updatePage(page)">
+                    <span [class.active]="page.isActive">{{page.number}}</span>
+                </li>
+            </ul>
+            <p class="text-primary fs-2 fw-800">Página actual: {{pagerProperties.page}}</p>
+        </div>
+    </div>
+    <div class="col d-flex justify-content-end">
+        <app-select 
+        [data]="[{label: '5', value: 5, isSelected: true},{label: '10', value: 10},{label: '20', value: 20}]"
+        label="Items por pág."
+        (modelUpdate)="updatePageSize($event)">
+        </app-select>
+    </div>
+</div>
+

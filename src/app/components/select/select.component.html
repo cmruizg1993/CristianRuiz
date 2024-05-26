@@ -1,0 +1,6 @@
+<label *ngIf="label">
+    {{label}}
+</label>
+<select [(ngModel)]="model">
+    <option [ngValue]="item" *ngFor="let item of data">{{item.label}}</option>
+</select>

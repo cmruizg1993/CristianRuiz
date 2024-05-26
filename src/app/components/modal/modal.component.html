@@ -1,0 +1,24 @@
+
+<div  class="modal-backdrop" [class.d-block]="show">
+    <div class="modal" [class]="class ? class:''" >
+        <div class="modal-title" *ngIf="modalSettings.title">
+            <h1 class="text-primary">{{modalSettings.title}}</h1>
+            <div class="hr mt-2"></div>
+        </div>
+        
+        <ng-content #modalContent>
+
+        </ng-content>
+        <div class="modal-footer" *ngIf="modalSettings.confirmButton || modalSettings.cancelButton">
+            <div class="hr mt-2 mb-1" style="border-bottom: 0.5px solid #D9D9D9 !important;"></div>
+            <div class="row">
+                <div class="col p-1">
+                    <app-button [label]="modalSettings.cancelButtonLabel ? modalSettings.cancelButtonLabel:'Cancelar'"  *ngIf="modalSettings.cancelButton" (onClick)="onCancel()" class="w100"></app-button>
+                </div>
+                <div class="col p-1">
+                    <app-button [label]="modalSettings.confirmButtonLabel ? modalSettings.confirmButtonLabel:'Confirmar'" *ngIf="modalSettings.confirmButton" (onClick)="onConfirm()" class="w100" [primary]="true"></app-button>       
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
