@@ -222,10 +222,11 @@ exports[`Product/EditComponent Debe coincidir con el snapshot' 1`] = `
             />
           </div>
           <p
-            class="text-primary fw-800"
+            class="text-primary fw-800 mb-2"
           >
               
           </p>
+          
         </div>
         
       </div>
