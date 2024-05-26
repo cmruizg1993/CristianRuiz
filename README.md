@@ -2,7 +2,7 @@
     Node.js ^18.13.0 || ^20.9.0
     Typescript >=5.2.0 <5.4.0
     Npm ^10.2.4
-    Angular Cli ^17.3
+
 
 # Instalación
 
@@ -14,7 +14,7 @@ Instalar dependencias `npm i`
 
 ## Correr aplicación
 
-Ejecutar el comando `ng serve` 
+Ejecutar el comando `npm run start` 
 
 
 ## Pruebas Unitarias
@@ -22,6 +22,10 @@ Ejecutar el comando `ng serve`
 Ejecutar el comando `npm run test` para correr las pruebas unitarias vía [jest]
 
 Ejecutar el comando `npm run test:coverage` para verificar la cobertura de las pruebas
+
+## Nota
+
+Se considera que el API, está corriendo en `localhost:3002`
 
 ## Para mas información
 
