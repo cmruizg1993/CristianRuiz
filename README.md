@@ -23,6 +23,10 @@ Ejecutar el comando `npm run test` para correr las pruebas unitarias vía [jest]
 
 Ejecutar el comando `npm run test:coverage` para verificar la cobertura de las pruebas
 
+## Nota
+
+Se considera que el API, está corriendo en `localhost:3002`
+
 ## Para mas información
 
 Puedes contactarme a mi correo personal: cmruizg1993@gmail.com
