@@ -21,6 +21,8 @@ Ejecutar el comando `ng serve`
 
 Ejecutar el comando `npm run test` para correr las pruebas unitarias vía [jest]
 
+Ejecutar el comando `npm run test:coverage` para verificar la cobertura de las pruebas
+
 ## Para mas información
 
 Puedes contactarme a mi correo personal: cmruizg1993@gmail.com
