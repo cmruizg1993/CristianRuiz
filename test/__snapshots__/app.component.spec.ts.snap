@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent Debe coincidir con el snapshot' 1`] = `
+<div
+  id="root1"
+>
+  <app-loader>
+    <div
+      class="loader-container d-none"
+    >
+      <div
+        class="loader"
+      />
+    </div>
+  </app-loader>
+  <div
+    class="container-fluid bg-secondary d-none"
+  >
+    <app-header>
+      <div
+        class="header bg-white mb-2"
+      >
+        <div
+          class="header-content"
+        >
+          <img
+            alt=""
+            class="header-icon"
+            src="assets/img/icon.png"
+          />
+          <span
+            class="header-title text-primary"
+          >
+            BANCO
+          </span>
+        </div>
+      </div>
+    </app-header>
+    <div>
+      <router-outlet />
+      
+    </div>
+  </div>
+</div>
+`;

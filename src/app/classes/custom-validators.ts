@@ -12,15 +12,18 @@ export  class CustomValidators {
     }
     static productValidateDateFormat(): ValidatorFn{
         return (control: AbstractControl): ValidationErrors | null => {
+            
+            const result = true;
+            const regex = /[0-9]{4,4}-[0-9]{2,2}-[0-9]{2,2}/;
             const date = new Date(control.value);
-            return isNaN(date.getDate()) ? { invalidDate: { value: control.value } } : null;
+            return !regex.test(control.value) || isNaN(date.getDate()) ? { invalidDateFormat: { value: control.value } } : null;
         };
     }
     static productValidateDateValue(): ValidatorFn{
         return (control: AbstractControl): ValidationErrors | null => {
             const date = new Date(control.value);
-            const currentDate = new Date(control.value);
-            return date < currentDate ? { invalidDate: { value: control.value } } : null;
+            const currentDate = new Date();
+            return date < currentDate ? { invalidDateValue: { value: control.value } } : null;
         };
     }
 }

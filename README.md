@@ -1,27 +1,26 @@
-# CristianRuiz
+# Requisitos
+    Node.js ^18.13.0 || ^20.9.0
+    Typescript >=5.2.0 <5.4.0
+    Npm ^10.2.4
+    Angular Cli ^17.3
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+# Instalación
 
-## Development server
+Clonar el repositorio, con el comando: `git clone https://github.com/cmruizg1993/CristianRuiz.git`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Abrir la carpeta del repositorio `cd ./CristianRuiz`
 
-## Code scaffolding
+Instalar dependencias `npm i`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Correr aplicación
 
-## Build
+Ejecutar el comando `ng serve` 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Pruebas Unitarias
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecutar el comando `npm run test` para correr las pruebas unitarias vía [jest]
 
-## Running end-to-end tests
+## Para mas información
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Puedes contactarme a mi correo personal: cmruizg1993@gmail.com

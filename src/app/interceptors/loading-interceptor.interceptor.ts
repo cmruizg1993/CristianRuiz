@@ -33,7 +33,7 @@ export class LoadingInterceptor implements HttpInterceptor {
           if (this.countRequest == 0) {
             setTimeout(() => {
               this.loaderService.closeLoader();
-            }, 1000);            
+            }, 100);            
           }
         })
       );

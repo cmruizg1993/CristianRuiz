@@ -11,30 +11,31 @@ import { IProduct } from '../interfaces/iproduct';
 })
 export class ProductService {
 
+  urlBase = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
   async getProducts(){
-    const endpoint = `${environment.apiUrl}/products`;
+    const endpoint = `${this.urlBase}/products`;
     const response$ = this.http.get(endpoint).pipe<Product[]>(map((r: any) => r.data));
     return await firstValueFrom(response$);
   }
   async createProduct(product: IProduct){
-    const endpoint = `${environment.apiUrl}/products`;
+    const endpoint = `${this.urlBase}/products`;
     const response$ = this.http.post(endpoint, product).pipe<any>(map((r: any) => r));
     return await firstValueFrom(response$);
   }
   async editProduct(product: IProduct){
-    const endpoint = `${environment.apiUrl}/products/${product.id}`;
+    const endpoint = `${this.urlBase}/products/${product.id}`;
     const response$ = this.http.put(endpoint, product).pipe<any>(map((r: any) => r));
     return await firstValueFrom(response$);
   }
   async deleteProduct(product: IProduct){
-    const endpoint = `${environment.apiUrl}/products/${product.id}`;
+    const endpoint = `${this.urlBase}/products/${product.id}`;
     const response$ = this.http.delete(endpoint).pipe<any>(map((r: any) => r));
     return await firstValueFrom(response$);
   }
   public verificationID(id: string): Observable<boolean>{
-    const endpoint = `${environment.apiUrl}/products/verification/${id}`
+    const endpoint = `${this.urlBase}/products/verification/${id}`
     const response$ = this.http.get(endpoint, {
       headers: {
         'X-Loader': 'none'

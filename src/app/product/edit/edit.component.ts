@@ -25,7 +25,7 @@ export class EditComponent {
     const product: any = this.router.getCurrentNavigation()?.extras.state;
     if(!product)
       router.navigate(['/'])
-    console.log(product)
+
     this.fields = Product.getProductEditFormFields(product);
 
     this.buttons = [

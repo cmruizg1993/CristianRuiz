@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product/CreateComponent Debe coincidir con el snapshot' 1`] = `
+<div
+  id="root1"
+>
+  <div
+    class="row mt-2 justify-content-center"
+  >
+    <div
+      class="col-md-6 bg-white"
+    >
+      <div
+        class="row p-2 justify-content-center"
+      >
+        <p
+          class="text-primary fs-4 fw-800"
+        >
+          Formulario de Registo
+        </p>
+        <div
+          class="hr mt-2"
+        />
+      </div>
+      <app-form>
+        <form
+          class="ng-untouched ng-pristine ng-invalid"
+          novalidate=""
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-md-6"
+            >
+              <div
+                class="form-group p-2"
+              >
+                <label
+                  class="text-primary fs-2 fw-800"
+                >
+                  ID
+                </label>
+                <input
+                  class="w100 ng-untouched ng-pristine ng-invalid"
+                  placeholder=""
+                  type="text"
+                />
+                <div
+                  class="text-danger fw-bolder"
+                  style="height: 1rem !important;"
+                >
+                  
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6"
+            >
+              <div
+                class="form-group p-2"
+              >
+                <label
+                  class="text-primary fs-2 fw-800"
+                >
+                  Nombre
+                </label>
+                <input
+                  class="w100 ng-untouched ng-pristine ng-invalid"
+                  placeholder=""
+                  type="text"
+                />
+                <div
+                  class="text-danger fw-bolder"
+                  style="height: 1rem !important;"
+                >
+                  
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6"
+            >
+              <div
+                class="form-group p-2"
+              >
+                <label
+                  class="text-primary fs-2 fw-800"
+                >
+                  Descripción
+                </label>
+                <input
+                  class="w100 ng-untouched ng-pristine ng-invalid"
+                  placeholder=""
+                  type="text"
+                />
+                <div
+                  class="text-danger fw-bolder"
+                  style="height: 1rem !important;"
+                >
+                  
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6"
+            >
+              <div
+                class="form-group p-2"
+              >
+                <label
+                  class="text-primary fs-2 fw-800"
+                >
+                  Logo
+                </label>
+                <input
+                  class="w100 ng-untouched ng-pristine ng-invalid"
+                  placeholder=""
+                  type="text"
+                />
+                <div
+                  class="text-danger fw-bolder"
+                  style="height: 1rem !important;"
+                >
+                  
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6"
+            >
+              <div
+                class="form-group p-2"
+              >
+                <label
+                  class="text-primary fs-2 fw-800"
+                >
+                  Fecha liberación
+                </label>
+                <input
+                  class="w100 ng-untouched ng-pristine ng-invalid"
+                  placeholder="yyyy-mm-dd"
+                  type="text"
+                />
+                <div
+                  class="text-danger fw-bolder"
+                  style="height: 1rem !important;"
+                >
+                  
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6"
+            >
+              <div
+                class="form-group p-2"
+              >
+                <label
+                  class="text-primary fs-2 fw-800"
+                >
+                  Fecha revisión
+                </label>
+                <input
+                  class="w100 ng-untouched ng-pristine"
+                  disabled=""
+                  placeholder=""
+                  type="text"
+                />
+                <div
+                  class="text-danger fw-bolder"
+                  style="height: 1rem !important;"
+                >
+                  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div
+            class="row p-4"
+          >
+            <div
+              class="col d-flex justify-content-center"
+            >
+              <app-button>
+                <button
+                  class="btn"
+                  type="button"
+                >
+                  Reiniciar
+                </button>
+              </app-button>
+            </div>
+            <div
+              class="col d-flex justify-content-center"
+            >
+              <app-button>
+                <button
+                  class="btn btn-primary"
+                  disabled=""
+                  type="button"
+                >
+                  Enviar
+                </button>
+              </app-button>
+            </div>
+            
+          </div>
+        </form>
+      </app-form>
+    </div>
+  </div>
+  <app-modal
+    class="w25"
+  >
+    <div
+      class="modal-backdrop"
+    >
+      <div
+        class="modal w25"
+      >
+        
+        <div
+          class="model-content"
+        >
+          <div
+            class="d-flex justify-content-center mb-2"
+          >
+            <img
+              src="assets/img/happy.svg"
+              width="50px"
+            />
+          </div>
+          <p
+            class="text-primary fw-800"
+          >
+              
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </app-modal>
+</div>
+`;

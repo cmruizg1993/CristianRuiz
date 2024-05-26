@@ -21,6 +21,9 @@ export class FormComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
+    this.renferFormFields();
+  }
+  renferFormFields(){
     this.form = this.formBuilder.group({});
     this.fields.forEach( field => {
       
@@ -37,7 +40,6 @@ export class FormComponent {
       
       this.form.addControl(field.name, new FormControl({ value: field.value, disabled: field.disabled }, validations, asynValidators));
     });
-    console.log(this.form)
   }
   evaluateControl(field: any){
     const controlName = field.name;
@@ -54,12 +56,10 @@ export class FormComponent {
       }
     }
       
-    console.log(controlName, status, control?.errors)
+    //console.log(controlName, status, control?.errors)
     return status;
   }
-  updateControl(event: any, controlName: string){
-    console.log(controlName, event)
-  }
+
   getErrorMessage(field: any){
     const control = this.form.get(field.name);
     if(control?.hasError('required')){
